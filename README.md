@@ -65,3 +65,14 @@ Simple genetic algorithm in Python to reach a fixed optimal DNA.
 |     225    | be ehe change thateyou wish eo seb ix thefzortd |
 |     250    | be the chafge thateyou pish to see qn the wortd |
 
+## Notes
+
+* Selection of an individual is directly proportional to square of its fitness score. For example:<br/>
+   * Ind1.score = 1<br/>
+   * Ind2.score = 2<br/>
+   * Ind3.score = 3<br/>
+So, the probability of selecting the **Ind3** is 3\*3 / (1\*1+2\*2+3\*3) = 9 / 14
+* Crossover is done in 3 to 10 random points in a DNA.<br/>
+   For example, let's say "1" represents the corresponding gene in a DNA of first individual and "2" represents gene of second individual.<br/>
+   In the DNA below, there are 5 crossover points.<br/>
+   111111**12**22222**21**1111111**12**2222222**21**1111**12**222222
